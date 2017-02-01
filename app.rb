@@ -7,10 +7,11 @@ require 'pry'
 set :bind, '0.0.0.0'  # bind to all interfaces
 set :views, File.join(File.dirname(__FILE__), "views")
 
-teams = TeamData::ROLL_CALL
+teams = TeamData.teams
 team_roster = []
 
 teams.each do |team, roster|
+
   players = []
 
   roster.each do |position, player|
@@ -27,7 +28,7 @@ get "/" do
 end
 
 get '/teams' do
-  @players = Player.all
+  @teams = Team.all
 
   erb :'teams/index'
 end

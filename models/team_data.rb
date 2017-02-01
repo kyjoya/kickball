@@ -1,4 +1,8 @@
 class TeamData
+  def self.teams
+    ROLL_CALL
+  end
+
   ROLL_CALL =
   {
     "Simpson Slammers": {
