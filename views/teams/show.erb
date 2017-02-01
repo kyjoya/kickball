@@ -1,0 +1,6 @@
+<h1><%= @team_name %></h1>
+
+<% @roster.each do |position, player| %>
+  <h4><%= position %></h4>
+  <p><%= player %></p>
+<% end %>

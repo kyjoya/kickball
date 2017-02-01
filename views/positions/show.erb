@@ -1,0 +1,4 @@
+<%= @position %>
+<% @teams.each do |team, roster| %>
+  <p><%= roster[@position.to_sym] %></p>
+<% end %>
